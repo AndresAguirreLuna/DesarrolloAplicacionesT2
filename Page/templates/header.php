@@ -40,17 +40,10 @@
             <li class="nav-item">
               <form action="Controlador.php" method="post" class="row g-3">
                 <div class="col-12">
-                    <input type="hidden" name="Clase" value="LibroModel">
-                    <input type="hidden" name="Funcion" value="get_libros">
-                    <input type="hidden" name="codigo" value="">
-                    <input type="hidden" name="titulo" value="">
-                    <input type="hidden" name="isbn" value="">
-                    <input type="hidden" name="editorial" value="">
-                    <input type="hidden" name="paginas value="">
-                    <input type="hidden" name="idAutor" value="">
-                    <input type="hidden" name="idAutorU" value="">
+                  <a href="http://localhost/DesarrolloAplicaciones2/Page/Libro/Index.php" >
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Libro </button>
-                </div>
+                  </a>
+                  </div>
                 </form>            
             </li>
             
@@ -79,16 +72,6 @@
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Usuario </button>
                 </div>
                 </form>       
-            </li>
-            <li class="nav-item">
-              <form action="Controlador.php" method="post" class="row g-3">
-                <div class="col-12">
-                    <input type="hidden" name="Clase" value="ConsultasModel">
-                    <input type="hidden" name="Funcion" value="get_ConsultaPrestamo">
-                    <input type="hidden" name="IdUsuario" value="">
-                    <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Consulta Préstamos </button>
-                </div>
-                </form>            
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
