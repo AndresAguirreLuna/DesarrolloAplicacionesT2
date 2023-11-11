@@ -4,6 +4,8 @@
 <body>
 
     <form action="procesar.php" method="POST">
+    <label for="message-text" id="result" name="result" class="col-form-label"> <?php echo isset($_GET['result']) ? htmlspecialchars($_GET['result']) : ''; ?></label>
+
         <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">

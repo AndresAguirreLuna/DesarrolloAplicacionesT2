@@ -16,10 +16,10 @@ if(@$_POST['btnRegistrar']){
     if($result){
         $numfila=$miconexion->ObtenerFilasAfectadas();
         if($numfila>0){
-            echo "Registro insertado en la base de datos.";
+            header ("location: index.php?result=Registro insertado en la base de datos.");
         }
         else{
-            echo "Error al registrar. no se guardo en la base de datos.";
+            header ("location: index.php?result=Error al registrar. no se guardo en la base de datos.");
         }
     }
 }
@@ -34,7 +34,7 @@ if (@$_POST['btnConsultar']){
         
     }
     else{
-        echo "Error, Libro no existe.";
+        header ("location: index.php?result=Error, Autor no existe");
     }
 }
 
@@ -46,10 +46,10 @@ if(@$_POST['btnEliminar']){
     if($result){
         $numfila=$miconexion->ObtenerFilasAfectadas();
         if ($numfila>0){
-            echo " Eliminado Exitosamente";
+        header ("location: index.php?result=Eliminado Exitosamente");
         }
         else{
-            echo"<h2> Error No se encontro que eliminar.</h2>";
+        header ("location: index.php?result=Error, No se encontro que eliminar.");
         }
     }
 
@@ -57,14 +57,15 @@ if(@$_POST['btnEliminar']){
 
 //Actualizar
 if (@$_POST['btnActualizar']){
-    $sql="update autor set nombre='".$nombre.", apellido='".$apellido." where Id='".$Codigo."'";
+    $sql="update autor set nombre='".$nombre."', apellido='".$apellido."' where Id='".$Codigo."'";
+    echo $sql;
     $result=$miconexion->EjecutarSQL($sql);
     if($result){
         if($result>0){
-            echo"Registro Actualizado";
+            header ("location: index.php?result=Registro Actualizado");
         }
     }else{
-        echo"Error al actulizar, no se encontro registro.";
+        header ("location: index.php?result=Error al actulizar, no se encontro registro.");
     }
         
     }
