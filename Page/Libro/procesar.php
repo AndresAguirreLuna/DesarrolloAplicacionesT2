@@ -3,13 +3,16 @@
 include('../../conexion.php');
 $miconexion = new ConexionMysql();
 $miconexion->CrearConexion();
-$Codigo=$_POST['Codigo'];
-$nombre=$_POST['Nombre'];
-$apellido=$_POST['Apellido'];
+$Codigo=$_POST['codigo'];
+$Titulo=$_POST['titulo'];
+$isbn=$_POST['isbn'];
+$Editorial=$_POST['editorial'];
+$Paginas=$_POST['paginas'];
+$IdAutor=$_POST['idAutor'];
 
 //Insertar
 if(@$_POST['btnRegistrar']){
-    $sql="insert into autor(Id,Nombre, Apellido) values('".$Codigo."','".$nombre."','".$apellido."')";
+    $sql="insert into libro(Codigo,Titulo, ISBN, Editorial, Paginas, IdAutor) values('".$Codigo."','".$Titulo."','".$isbn."','".$Editorial."','".$Paginas."','".$IdAutor."')";
     $result=$miconexion->EjecutarSQL($sql);
     if($result){
         $numfila=$miconexion->ObtenerFilasAfectadas();
@@ -23,23 +26,23 @@ if(@$_POST['btnRegistrar']){
 }
 //Consultar
 if (@$_POST['btnConsultar']){
-    $sql="select Id, Nombre, Apellido from autor where Id='".$Codigo."'";
+    $sql="select Codigo,Titulo, ISBN, Editorial, Paginas, IdAutor from libro where codigo='".$Codigo."'";
     $result=$miconexion->EjecutarSQL($sql);
     if($result){
         while ($row=$miconexion->ObtenerFilas($result)){
-            header ("location: index.php?Id=".$row[0]."&nombre=".$row[1]."&apellido=".$row[2]);
+            header ("location: index.php?Codigo=".$row[0]."&Titulo=".$row[1]."&isbn=".$row[2]."&Editorial=".$row[3]."&Paginas=".$row[4]."&IdAutor=".$row[5]);
         }
         
     }
     else{
-        header ("location: index.php?result=Error, Autor no existe");
+        header ("location: index.php?result=Error, Libro no existe");
     }
 }
 
 
 //Eliminar///
 if(@$_POST['btnEliminar']){
-    $sql="delete from autor where Id='".$Codigo."'";
+    $sql="delete from libro where Codigo='".$Codigo."'";
     $result =$miconexion->EjecutarSQL($sql);
     if($result){
         $numfila=$miconexion->ObtenerFilasAfectadas();
@@ -55,7 +58,7 @@ if(@$_POST['btnEliminar']){
 
 //Actualizar
 if (@$_POST['btnActualizar']){
-    $sql="update autor set nombre='".$nombre."', apellido='".$apellido."' where Id='".$Codigo."'";
+    $sql="update libro set Titulo='".$Titulo."', ISBN='".$isbn."', Editorial='".$Editorial."', Paginas='".$Paginas."', IdAutor='".$IdAutor."' where Codigo='".$Codigo."'";
     $result=$miconexion->EjecutarSQL($sql);
     if($result){
         if($result>0){

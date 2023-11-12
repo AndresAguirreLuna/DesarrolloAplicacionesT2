@@ -38,13 +38,11 @@
                   </div>  
             </li>
             <li class="nav-item">
-              <form action="Controlador.php" method="post" class="row g-3">
                 <div class="col-12">
                   <a href="http://localhost/DesarrolloAplicaciones2/Page/Libro/Index.php" >
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Libro </button>
                   </a>
-                  </div>
-                </form>            
+                  </div>  
             </li>
             
             <li class="nav-item">
