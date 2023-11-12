@@ -32,45 +32,33 @@
             </li>
             <li class="nav-item">
                 <div class="col-12">
-                  <a href="http://localhost/DesarrolloAplicaciones2/Page/Autor/Index.php" >
+                  <a href="http://localhost/DesarrolloAplicacionesT2/Page/Autor/Index.php" >
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Autor </button>
                   </a>
                   </div>  
             </li>
             <li class="nav-item">
                 <div class="col-12">
-                  <a href="http://localhost/DesarrolloAplicaciones2/Page/Libro/Index.php" >
+                  <a href="http://localhost/DesarrolloAplicacionesT2/Page/Libro/Index.php" >
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Libro </button>
                   </a>
                   </div>  
             </li>
             
             <li class="nav-item">
-              <form action="Controlador.php" method="post" class="row g-3">
                 <div class="col-12">
-                    <input type="hidden" name="Clase" value="EjemplarModel">
-                    <input type="hidden" name="Funcion" value="get_ejemplar">
-                    <input type="hidden" name="codigo" value="">
-                    <input type="hidden" name="localizacion" value="">
-                    <input type="hidden" name="idlibro" value="">
-                    <input type="hidden" name="idlibroU" value="">
+                    <a href="http://localhost/DesarrolloAplicacionesT2/Page/Ejemplares/Index.php" >
                     <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Ejemplar </button>
+                    </a>
                 </div>
-                </form>            
-            </li>
             <li class="nav-item">
-              <form action="Controlador.php" method="post" class="row g-3">
-                <div class="col-12">
-                    <input type="hidden" name="Clase" value="UsuarioModel">
-                    <input type="hidden" name="Funcion" value="get_usuarios">
-                    <input type="hidden" name="codigo" value="">
-                    <input type="hidden" name="nombre" value="">
-                    <input type="hidden" name="telefono" value="">
-                    <input type="hidden" name="direccion" value="">
-                    <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Usuario </button>
-                </div>
-                </form>       
+                  <div class="col-12">
+                      <a href="http://localhost/DesarrolloAplicacionesT2/Page/Usuarios/Index.php" >
+                      <button type="submit" class="btn btn-link" style="color: black;" name="Boton">Admin Usuarios </button>
+                      </a>
+                  </div>         
             </li>
+ 
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </li>
